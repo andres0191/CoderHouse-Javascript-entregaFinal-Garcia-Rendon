@@ -19,12 +19,13 @@ if(isNaN(allPrice[0]) || isNaN(allPrice[1]) || isNaN(allPrice[2]) || isNaN(dto) 
                     alert('ingresa un dato valido')
                     break
                 }else{
-                confirm(`El valor de dto aplicado al precio de $ ${allPrice[i]} sera de $ ${descuento}, por lo tanto debes cancelar: $ ${allPrice[i] - descuento}`)
+                alert(`El valor de dto aplicado al precio de $ ${allPrice[i]} sera de $ ${descuento}, por lo tanto debes cancelar: $ ${allPrice[i] - descuento}`)
                 }
         }
     } 
 
 }
+
 
 
 
