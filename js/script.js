@@ -10,7 +10,7 @@ const priceOne = window.prompt('ingresa un precio'),
 if(isNaN(allPrice[0]) || isNaN(allPrice[1]) || isNaN(allPrice[2]) || isNaN(dto) || allPrice=="" ){
     alert(`debes ingresar solo numeros`)
 }else if(priceOne == 0 || priceTwo == 0 || priceTrhee == 0 ){
-    alert('ingresa al menos un valor')
+    return alert('ingresa un dato valido')
     }else{
         for(let i =0; i<allPrice.length; i++){
             let descuento= allPrice[i]*`0.${dto}`
@@ -22,9 +22,10 @@ if(isNaN(allPrice[0]) || isNaN(allPrice[1]) || isNaN(allPrice[2]) || isNaN(dto) 
                 alert(`El valor de dto aplicado al precio de $ ${allPrice[i]} sera de $ ${descuento}, por lo tanto debes cancelar: $ ${allPrice[i] - descuento}`)
                 }
         }
-    } 
-
+    }
 }
+
+alert(descuentos())
 
 
 
