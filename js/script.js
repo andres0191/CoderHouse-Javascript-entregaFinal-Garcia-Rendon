@@ -1,6 +1,6 @@
 const imgLogo = document.querySelector('img#logo')
 const logoCesta = document.querySelector('img#logoCesta')
-const vlorCount = document.querySelector('spam#count')
+const valorCount = document.querySelector('spam#count')
 
 const titulo = document.getElementById('titulo')
 titulo.textContent = 'Donitas'
@@ -53,14 +53,14 @@ function activarClick(){
     })
   }
   //Count of products
-  let contador = 0
+  let count = 0
   btns.forEach(boton => {
     boton.addEventListener('click', function(e) {
       const estilos = e.currentTarget.classList
       if(estilos.contains('addProdcut')){
-        contador++
+        count++
       }
-      vlorCount.textContent = contador
+      valorCount.textContent = count
     })
   })
   //print lst in Checkout page

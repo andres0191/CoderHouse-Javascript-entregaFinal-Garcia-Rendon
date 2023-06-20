@@ -23,12 +23,12 @@ function updateProducts(){
 }
 
 //Delete Product
-    document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('deleteProduct')) {
-          const filaId = e.target.closest('tr').id;
-          const index = parseInt(filaId.split('-')[1])
-          carShop.splice(index, 1)
-          localStorage.setItem('myShop', JSON.stringify(carShop))
-          e.target.closest('tr').remove()
-        }
-      })
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('deleteProduct')) {
+        const rowId = e.target.closest('tr').id;
+        const index = parseInt(rowId.split('-')[1])
+        carShop.splice(index, 1)
+        localStorage.setItem('myShop', JSON.stringify(carShop))
+        e.target.closest('tr').remove()
+    }
+})
