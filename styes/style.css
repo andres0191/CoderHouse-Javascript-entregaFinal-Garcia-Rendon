@@ -24,10 +24,20 @@ header{
     background-size: 100%;
 }
 
+.imgLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo{
     margin: 2%;
     font-size: 100px;
     color: var(--text-color)
+}
+
+.logoImg{
+    width: 15%;
 }
 
 .options-navbar{
@@ -41,6 +51,14 @@ header{
     background-color: rgba(255, 255, 255, 0.782);
     margin: 15%;
     border-radius: 50px;
+}
+
+#pedidos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    font-size: 1.5em;
 }
 
 #container{
