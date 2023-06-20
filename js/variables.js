@@ -1,3 +1,11 @@
+function dataLS() {
+    if(localStorage.getItem('carShop')){
+        return JSON.parse(localStorage.getItem('carShop'))
+    }else{
+        return []
+    }
+}
+
 const carShop = []
 
 const arraySabores = [{base: 'Chocolate', ref: 1, cobertura: 'Coclate Negro', topping:'Grageas', precio: 3000, imagen: './src/img/dona1.jpeg', description: 'Donut de chocolate con cobertura de chocolate negro y grageas'},
@@ -8,10 +16,4 @@ const arraySabores = [{base: 'Chocolate', ref: 1, cobertura: 'Coclate Negro', to
                         {base: 'Mani', ref: 6, cobertura: 'Chocolate Negro', topping: 'Mani', precio: 2800, imagen: './src/img/dona6.png', description: 'Donut de mani con cobertura de chocolate negro con mani'}
 ]
 
-function dataLS() {
-    if(localStorage.getItem('carShop')){
-        return JSON.parse(localStorage.getItem('carShop'))
-    }else{
-        return []
-    }
-}
+

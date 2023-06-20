@@ -9,7 +9,7 @@ html {
     color-scheme: black;
 }
 
-body{
+.bgimg{
     background-image: url('../src/img/v1010-71c.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -17,7 +17,7 @@ body{
     background-attachment: fixed;
 }
 
-header{
+.mainHeader{
     position: fixed;
     top: 0;
     left: 0;
@@ -143,4 +143,26 @@ header{
 
 .nav{
     gap: 50px;
+}
+
+/* class of checkout page */
+
+.carrito{
+    margin: 2%;
+    font-size: 10px;
+    color: var(--text-color)
+}
+
+#tableContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myTable{
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
 }
