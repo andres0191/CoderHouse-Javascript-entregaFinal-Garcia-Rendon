@@ -1,26 +1,16 @@
-const titulo = document.getElementById('titulo')
-titulo.textContent = 'Donitas'
-
-const imgLogo = document.querySelector('img#logo')
-const carReview = document.getElementById('carReview')
-carReview.textContent = 'Por favor revisa tu carrito antes de finalizar la compra'
-
 const tbody = document.querySelector('tbody')
 
-function mostrarProductos(product){
+function mostrarProductos(productCar){
     return`<tr>
-                <td>${product.imagen}</td>
-                <td>${product.base}</td>
-                <td>${product.description}</td>
-                <td>${product.precio}</td>
+                <td>${productCar.imagen}</td>
+                <td>${productCar.base}</td>
+                <td>${productCar.description}</td>
+                <td>${productCar.precio}</td>
            </tr>`
 }
 
-if(carShop.length >= 0){
-    carShop.forEach((product) => {
-        tbody.innerHTML += mostrarProductos(product)
+if(carShop.length > 0){
+    carShop.forEach((productCar) => {
+        tbody.innerHTML += mostrarProductos(productCar)
     })
 }
-
-
-
