@@ -1,12 +1,12 @@
 function dataLS() {
-    if(localStorage.getItem('carShop')){
-        return JSON.parse(localStorage.getItem('carShop'))
+    if(localStorage.getItem('myShop')){
+        return JSON.parse(localStorage.getItem('myShop'))
     }else{
         return []
     }
 }
 
-const carShop = []
+const carShop = dataLS()
 
 const arraySabores = [{base: 'Chocolate', ref: 1, cobertura: 'Coclate Negro', topping:'Grageas', precio: 3000, imagen: './src/img/dona1.jpeg', description: 'Donut de chocolate con cobertura de chocolate negro y grageas'},
                         {base: 'Miel Canela', ref: 2, cobertura:  'Azucar Canela ', topping: 'Decorado con Chocolate', precio: 3500, imagen: './src/img/dona2.jpeg', description: 'Donut de chocolate con cobertura de chocolate negro y grageas'},
@@ -15,5 +15,3 @@ const arraySabores = [{base: 'Chocolate', ref: 1, cobertura: 'Coclate Negro', to
                         {base: 'Frutal', ref: 5, cobertura:'Chocolate de Colores', topping: 'Fruta Cristalizada', precio: 3000, imagen: './src/img/dona5.jpeg', description: 'Donut frutal con cobertura de chocolate de colores y fruta cristalizada'},
                         {base: 'Mani', ref: 6, cobertura: 'Chocolate Negro', topping: 'Mani', precio: 2800, imagen: './src/img/dona6.png', description: 'Donut de mani con cobertura de chocolate negro con mani'}
 ]
-
-

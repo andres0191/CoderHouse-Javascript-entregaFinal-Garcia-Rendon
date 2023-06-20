@@ -48,7 +48,7 @@ function activarClick(){
       const donaSeleccionada = arraySabores.find((sabor) => sabor.ref === parseInt(e.target.id))
       carShop.push(donaSeleccionada)
       console.table(carShop)
-      localStorage.setItem('carShop', JSON.stringify(carShop))
+      localStorage.setItem('myShop', JSON.stringify(carShop))
       console.log(JSON.stringify(carShop))
     })
   }
@@ -76,3 +76,11 @@ logoCesta.addEventListener('click', ()=> {
 logoCesta.addEventListener('mousemove', (e)=> {
   logoCesta.title = 'Ver Donitas'
 })
+
+
+/* function getValue() {
+  let input = document.getElementById("search")
+  let inputData = input.value;
+  console.log(inputData)
+} 
+console.table(arraySabores.filter(p => p.sabor.include(inputData))) */

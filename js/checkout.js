@@ -1,15 +1,14 @@
 const tbody = document.querySelector('tbody')
 
- function mostrarProductos(productCar){
+ function mostrarProductos(productCar, index){
     return`<tr>
                 <td><img class="donitaIcon" src="${productCar.imagen}"></td>
                 <td>${productCar.base}</td>
                 <td>${productCar.description}</td>
                 <td>${productCar.precio}</td>
-                <td><a><img style="width:35px" src="./src/img/eliminar.png"></a></td>
+                <td class="deleteProduct"><img style="width:35px" src="./src/img/eliminar.png"></td>
            </tr>`
 }
-
 updateProducts()
 
 function updateProducts(){
@@ -22,3 +21,14 @@ function updateProducts(){
         })
     }
 }
+
+//Delete Product
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('deleteProduct')) {
+          const filaId = e.target.closest('tr').id;
+          const index = parseInt(filaId.split('-')[1])
+          carShop.splice(index, 1)
+          localStorage.setItem('myShop', JSON.stringify(carShop))
+          e.target.closest('tr').remove()
+        }
+      })
