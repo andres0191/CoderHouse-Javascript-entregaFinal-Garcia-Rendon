@@ -193,3 +193,8 @@ html {
     height: 80%;
     border: 1px solid black;
 }
+
+.donitaIcon{
+    border-radius: 10px;
+    width: 70px;
+}
