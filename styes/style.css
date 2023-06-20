@@ -4,6 +4,11 @@
     box-sizing: border-box;
     --text-color: rgb(174, 81, 241);
 }
+
+html {
+    color-scheme: black;
+}
+
 body{
     background-image: url('../src/img/v1010-71c.jpg');
     background-repeat: no-repeat;
@@ -40,6 +45,11 @@ header{
     width: 15%;
 }
 
+.linkDonitas{
+    list-style: none;
+    text-decoration: none;
+}
+
 .options-navbar{
     display: flex;
     justify-content: space-around;
@@ -73,6 +83,16 @@ header{
     flex-wrap: wrap;
     margin-top: 15%;
     width: 80%;
+}
+
+#productErr{
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: darkred;
+    box-shadow: 6px 8px 8px darkslategrey;
 }
 
 
