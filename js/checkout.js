@@ -1,12 +1,12 @@
 const tbody = document.querySelector('tbody')
 
  function mostrarProductos(productCar, index){
-    return`<tr>
+    return`<tr id="${productCar.ref}">
                 <td><img class="donitaIcon" src="${productCar.imagen}"></td>
                 <td>${productCar.base}</td>
                 <td>${productCar.description}</td>
                 <td>${productCar.precio}</td>
-                <td class="deleteProduct"><img style="width:35px" src="./src/img/eliminar.png"></td>
+                <td><img class="deleteProduct" style="width:35px" src="./src/img/eliminar.png"></td>
            </tr>`
 }
 updateProducts()
