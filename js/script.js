@@ -1,6 +1,10 @@
 const imgLogo = document.querySelector('img#logo')
 const logoCesta = document.querySelector('img#logoCesta')
 const valorCount = document.querySelector('spam#count')
+const searchInput = document.querySelector('#searchInput')
+const searchContainer = document.querySelector('#searchContainer')
+const searchBtn = document.querySelector('#searchBtn')
+
 
 const titulo = document.getElementById('titulo')
 titulo.textContent = 'Donitas'
@@ -21,11 +25,17 @@ function retornoCardHTML(product){
   </div>`
 }
 
-function productErr(){
-  return `<div id="productErr">
-            <h2>Error</h2>
-            <h3>Producto No disponible</h3>
-          </div>`
+
+function retornoSearch(product){
+  return `<div class="card" style="width: 18rem;margin-top: 5%;margin-bottom: 5%">
+    <img src="${product.imagen}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">${product.base}</h5>
+      <p class="card-text">${product.description}</p>
+      <b><p class="card-text">${product.precio}</p></b>
+      <a class="btn addProdcut btn-primary" id="${product.ref}">Agregar</a>
+    </div>
+  </div>`
 }
 
 function cargarPorductos(){
@@ -77,10 +87,62 @@ logoCesta.addEventListener('mousemove', (e)=> {
   logoCesta.title = 'Ver Donitas'
 })
 
+function captureInput(){
+  searchContainer.innerHTML = ''
+  let textInput = searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      let dataInput = searchInput.value
+      console.log(dataInput)
+      let resultado = arraySabores.filter(dataInput => dataInput.base)
+      console.log(resultado)
+      for(let producto of arraySabores){
+        let nombre = producto.base
+        console.log(nombre)
+        if(nombre.indexOf(textInput) !== 0){
+          searchContainer.innerHTML = `
+          <div class="card" style="width: 18rem;margin-top: 5%;margin-bottom: 5%">
+            <img src="${nombre.imagen}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">${nombre.base}</h5>
+              <p class="card-text">${nombre.description}</p>
+              <b><p class="card-text">${nombre.precio}</p></b>
+              <a class="btn addProdcut btn-primary" id="${nombre.ref}">Agregar</a>
+            </div>
+          </div>
+          ` 
+        }
+      }
+    }else{
+      searchContainer.innerHTML = ''
+    }
+  })
+}
 
-/* function getValue() {
-  let input = document.getElementById("search")
-  let inputData = input.value;
-  console.log(inputData)
-} 
-console.table(arraySabores.filter(p => p.sabor.include(inputData))) */
+captureInput()
+
+
+
+/* function searchProduct() {
+  let search = document.getElementById("search")
+  search.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      let dataInput = search.value
+      // Filtrar el array de objetos de datos según la consulta de búsqueda
+      let filtered = arraySabores.filter(function(obj) {
+        let base = obj.base
+        console.log(`estoy en el primer if ${base}`)
+        arraySabores.forEach((dataInput) => {
+          if(arraySabores.base === dataInput){
+            console.log(`estoy en el segundo if`)
+          }
+        return base.includes(dataInput)
+      })
+      })
+      console.table(filtered)
+      console.log(searchContainer)
+     
+  }
+})
+} */
+// Manejador de eventos para el evento "input" en el campo de búsqueda
+/* search.addEventListener("input", search) */
