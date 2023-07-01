@@ -1,4 +1,9 @@
 const tbody = document.querySelector('tbody')
+const myTable = document.querySelector('#myTable')
+const animatinoGif = document.querySelector('#animatinoGif')
+const imgGif = './src/img/donitaTime.gif'
+
+
 
  function mostrarProductos(productCar){
     return`<tr id="${productCar.ref}">
@@ -10,25 +15,18 @@ const tbody = document.querySelector('tbody')
            </tr>`
 }
 
-function searchProductos(){
-    return`<tr id="${productCar.ref}">
-            <td><img class="donitaIcon" src="${productCar.imagen}"></td>
-            <td>${productCar.base}</td>
-            <td>${productCar.description}</td>
-            <td>${productCar.precio}</td>
-            <td><img class="deleteProduct" style="width:35px" src="./src/img/eliminar.png"></td>
-        </tr>`
-}
-
-
 //Add prodcuts to LS and print in table
 function updateProducts(){
-    let carShop = dataLS()
-    if(carShop.length > 0){
-        carShop.forEach((productCar) => {
-            tbody.innerHTML += mostrarProductos(productCar)
-        })
-    }
+    animatinoGif.innerHTML = `<img src=${imgGif}>`
+    setTimeout(() => {
+        animatinoGif.innerHTML = ''
+        let carShop = dataLS()
+        if(carShop.length > 0){
+            carShop.forEach((productCar) => {
+                tbody.innerHTML += mostrarProductos(productCar)
+            })
+        }
+    }, 3500);
 }
 
 updateProducts()
@@ -43,3 +41,11 @@ document.addEventListener('click', function(e) {
         e.target.closest('tr').remove()
     }
 })
+
+//animation of onload page
+/* window.onload = function(){
+    alert('esta cargando la pagina')
+    setTimeout(() => {
+        alert('Ya cargo la pagina')
+    }, 3000);
+} */
