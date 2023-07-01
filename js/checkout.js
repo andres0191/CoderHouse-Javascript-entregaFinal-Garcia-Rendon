@@ -39,6 +39,7 @@ document.addEventListener('click', function(e) {
         carShop.splice(index, 1)
         localStorage.setItem('myShop', JSON.stringify(carShop))
         e.target.closest('tr').remove()
+        alertify.message('Producto eliminado con exito :)');
     }
 })
 
