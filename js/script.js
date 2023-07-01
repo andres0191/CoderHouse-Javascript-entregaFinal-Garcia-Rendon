@@ -31,12 +31,21 @@ function cargarPorductos(arr){
       arr.forEach((product) => {
         containerProducts.innerHTML += retornoCardHTML(product)
       })
-    }else{
-      containerProducts.innerHTML = productErr()
     }
     activarClick()
 }
 cargarPorductos(arraySabores)
+
+//Ajax y fetch
+function obtenerPordutos(){
+  fetch(localPorducts)
+  .then(response => response.json())
+  .then((data) => arraySabores.push(...data))
+  .then(() => cargarPorductos(arraySabores)) 
+}
+
+obtenerPordutos()
+
 //add product to the car
 function activarClick(){
   const btns = document.querySelectorAll('a.btn.btn-primary')
