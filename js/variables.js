@@ -8,4 +8,4 @@ function dataLS() {
 
 const carShop = dataLS()
 const arraySabores = []
-const localPorducts = 'js/products.json'
+const localProducts = 'js/products.json'

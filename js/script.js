@@ -25,7 +25,7 @@ function retornoCardHTML(product){
 }
 
 //Function of cargar productos in principal page
-function cargarPorductos(arr){
+function cargarProductos(arr){
   containerProducts.innerHTML = ''
     if(arr.length > 0){
       arr.forEach((product) => {
@@ -34,16 +34,18 @@ function cargarPorductos(arr){
     }
     activarClick()
 }
-cargarPorductos(arraySabores)
 
-//Ajax y fetch
-function obtenerPordutos(){
-  fetch(localPorducts)
-  .then(response => response.json())
-  .then((data) => arraySabores.push(...data))
-  .then(() => cargarPorductos(arraySabores)) 
+//async awati
+async function obtenerPordutos(){
+  try {
+    const response = await fetch(localProducts);
+    const data = await response.json();
+    arraySabores.push(...data);
+    cargarProductos(arraySabores);
+  }catch (error) {
+    console.log(error);
+  }
 }
-
 obtenerPordutos()
 
 //add product to the car
@@ -93,5 +95,5 @@ function captureInput(){
   searchContainer.innerHTML = ''
   let datainput = searchInput.value
   let resultado = arraySabores.filter(prod => prod.base.includes(datainput))
-  cargarPorductos(resultado)
+  cargarProductos(resultado)
 }
