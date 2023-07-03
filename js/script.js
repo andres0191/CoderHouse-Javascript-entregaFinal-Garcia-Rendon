@@ -3,7 +3,6 @@ const logoCesta = document.querySelector('img#logoCesta')
 const valorCount = document.querySelector('spam#count')
 const searchInput = document.querySelector('#searchInput')
 const searchContainer = document.querySelector('#searchContainer')
-const searchBtn = document.querySelector('#searchBtn')
 
 const titulo = document.getElementById('titulo')
 titulo.textContent = 'Donitas'
