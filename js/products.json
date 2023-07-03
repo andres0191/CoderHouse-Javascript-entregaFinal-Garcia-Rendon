@@ -1,25 +1,25 @@
 
 [
     {
-        "base":  "Chocolate",
+        "base":  "chocolate",
         "ref": 1,
-        "cobertura":  "Coclate Negro ",
+        "cobertura":  "chocolate Negro ",
         "topping": "Grageas ",
         "precio": 3000,
         "imagen":  "./src/img/dona1.jpeg ",
         "description":  "Donut de chocolate con cobertura de chocolate negro y grageas "
     },
     {
-        "base":  "Miel Canela ",
+        "base":  "miel canela ",
         "ref": 2,
         "cobertura":   "Azucar Canela  ",
-        "topping":  "Decorado con Chocolate ",
+        "topping":  "Decorado con chocolate ",
         "precio": 3500,
         "imagen":  "./src/img/dona2.jpeg ",
         "description":  "Donut de chocolate con cobertura de chocolate negro y grageas "
     },
     {
-        "base":  "Arequipe ",
+        "base":  "arequipe ",
         "ref": 3,
         "cobertura":   "Relleno de arequipe  ",
         "topping":  "Nutella ",
@@ -28,27 +28,27 @@
         "description":  "Donut de arequipe con relleno de arequipe y decorado de nutella "
     },
     {
-        "base":  "Moca ",
+        "base":  "moca ",
         "ref": 4,
-        "cobertura":  "Chocolate ",
+        "cobertura":  "chocolate",
         "topping":  "Masmelos ",
         "precio": 3800,
         "imagen":  "./src/img/dona4.jpg ",
-        "description":  "Donut de Moca con cobertura de chocolate y masmelos "
+        "description":  "Donut de moca con cobertura de chocolate y masmelos "
     },
     {
-        "base":  "Frutal ",
+        "base":  "frutal",
         "ref": 5,
-        "cobertura": "Chocolate de Colores ",
+        "cobertura": "chocolate de Colores ",
         "topping":  "Fruta Cristalizada ",
         "precio": 3000,
         "imagen":  "./src/img/dona5.jpeg ",
         "description":  "Donut frutal con cobertura de chocolate de colores y fruta cristalizada "
     },
     {
-        "base":  "Mani ",
+        "base":  "mani ",
         "ref": 6,
-        "cobertura":  "Chocolate Negro ",
+        "cobertura":  "chocolate Negro ",
         "topping":  "Mani ",
         "precio": 2800,
         "imagen":  "./src/img/dona6.png ",

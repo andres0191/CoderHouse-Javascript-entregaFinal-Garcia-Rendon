@@ -42,11 +42,3 @@ document.addEventListener('click', function(e) {
         alertify.message('Producto eliminado con exito :)');
     }
 })
-
-//animation of onload page
-/* window.onload = function(){
-    alert('esta cargando la pagina')
-    setTimeout(() => {
-        alert('Ya cargo la pagina')
-    }, 3000);
-} */

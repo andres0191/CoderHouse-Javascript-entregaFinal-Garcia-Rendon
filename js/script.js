@@ -87,8 +87,12 @@ logoCesta.addEventListener('mousemove', (e)=> {
 })
 
 //Functions of search input
+searchInput.addEventListener('click', function(event){
+  alertify.message('Presiona Enter para iniciar tu busqeuda')
+})
+
 searchInput.addEventListener('keyup', function(event){
-  (event.key === 'Enter') ? captureInput() : 'holi'
+  (event.key === 'Enter') ? captureInput() : ""
 })
 
 function captureInput(){
